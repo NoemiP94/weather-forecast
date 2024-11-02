@@ -1,23 +1,26 @@
 <div>
   <div>
-    <p>city</p>
+    <p>{{ datas?.name }}</p>
     <p>°C</p>
   </div>
   <div>
     <div>
-      <p>Sunday</p>
-      <p>date</p>
+      <p>{{ datas?.main.temp }}</p>
+      <!-- formattare la data -->
+      <p>{{ datas?.dt }}</p>
     </div>
     <div>
-      <div><p>icon</p></div>
+      <div>
+        <p>{{ datas?.weather[0].icon }}</p>
+      </div>
       <div>
         <div>
-          <p>max temp</p>
-          <p>min temp</p>
+          <p>{{ datas?.main.temp_max }}</p>
+          <p>{{ datas?.main.temp_min }}</p>
         </div>
         <div>
-          <p>rain</p>
-          <p>temp perc</p>
+          <p>{{ datas?.weather[0].description }}</p>
+          <p>{{ datas?.main.feels_like }}</p>
         </div>
       </div>
     </div>

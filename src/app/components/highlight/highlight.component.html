@@ -1,1 +1,49 @@
-<p>highlight works!</p>
+<div>
+  <h4>Today's Highlight</h4>
+  <div>
+    <div>
+      <h6>icona - wind status</h6>
+      <div>
+        <!-- da formattare in km/h -->
+        <p>{{ datas?.wind.speed }}</p>
+        <!-- da formattare in orario -->
+        <p>{{ datas?.dt }}</p>
+      </div>
+    </div>
+    <div>
+      <h6>icon - Humidity</h6>
+      <div>
+        <p>{{ datas?.main.humidity }} %</p>
+      </div>
+    </div>
+    <div>
+      <div>icona</div>
+      <div>
+        <h6>Sunrise</h6>
+        <!-- orario da formattare -->
+        <p>{{ datas?.sys.sunrise }}</p>
+      </div>
+    </div>
+    <div>
+      <h6>icon - pression</h6>
+      <div>
+        <p>{{ datas?.main.pressure }}</p>
+        <!-- orario da formattare -->
+        <p>{{ datas?.dt }}</p>
+      </div>
+    </div>
+    <div>
+      <h6>icon -Visibility</h6>
+      <!-- formattare in kms -->
+      <div>{{ datas?.visibility }}</div>
+    </div>
+    <div>
+      <div>icona</div>
+      <div>
+        <h6>Sunset</h6>
+        <!-- orario da formattare -->
+        <p>{{ datas?.sys.sunset }}</p>
+      </div>
+    </div>
+  </div>
+</div>

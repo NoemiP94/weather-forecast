@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import {
+  BrowserModule,
+  provideClientHydration,
+} from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +12,7 @@ import { MaindataComponent } from './components/maindata/maindata.component';
 import { HighlightComponent } from './components/highlight/highlight.component';
 import { NextforecastComponent } from './components/nextforecast/nextforecast.component';
 import { OtherComponent } from './components/other/other.component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,16 +21,14 @@ import { OtherComponent } from './components/other/other.component';
     MaindataComponent,
     HighlightComponent,
     NextforecastComponent,
-    OtherComponent
+    OtherComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient(),
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
