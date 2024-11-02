@@ -10,9 +10,9 @@ export class NextforecastComponent implements OnInit {
   datas: any;
   constructor(private forecast: ForecastService) {}
   ngOnInit(): void {
-    this.forecast.getNextForecast().subscribe((data: any) => {
-      this.datas = data;
-      console.log(data);
-    });
+    // this.forecast.getNextForecast().subscribe((data: any) => {
+    //   this.datas = data;
+    //   console.log(data);
+    // });
   }
 }
