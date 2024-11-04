@@ -14,6 +14,11 @@ import { NextforecastComponent } from './components/nextforecast/nextforecast.co
 import { OtherComponent } from './components/other/other.component';
 import { provideHttpClient } from '@angular/common/http';
 
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +28,14 @@ import { provideHttpClient } from '@angular/common/http';
     NextforecastComponent,
     OtherComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    ReactiveFormsModule,
+  ],
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),

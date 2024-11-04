@@ -1,1 +1,8 @@
-<p>searchbar works!</p>
+<form (submit)="sendCityName($event)">
+  <mat-form-field class="example-full-width">
+    <input #cityInput placeholder="Inserisci una città" matInput />
+  </mat-form-field>
+  <button type="submit">
+    <mat-icon>search</mat-icon>
+  </button>
+</form>

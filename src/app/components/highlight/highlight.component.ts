@@ -10,9 +10,9 @@ export class HighlightComponent implements OnInit {
   datas: any;
   constructor(private forecast: ForecastService) {}
   ngOnInit(): void {
-    this.forecast.getForecast().subscribe((data: any) => {
-      this.datas = data;
-      //console.log(data);
-    });
+    // this.forecast.getForecast().subscribe((data: any) => {
+    //   this.datas = data;
+    //   //console.log(data);
+    // });
   }
 }
