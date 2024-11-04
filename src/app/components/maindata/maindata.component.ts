@@ -29,10 +29,4 @@ export class MaindataComponent implements OnInit {
       console.log(this.weatherData);
     });
   }
-
-  //mostra i dati con la nuova città inserita
-  // updateCity(cityName: string) {
-  //   this.cityName = cityName;
-  //   this.getWeather();
-  // }
 }

@@ -1,26 +1,26 @@
 <div style="background-color: #272727">
   <div>
-    <p>{{ weatherData?.name }}</p>
+    <p>{{ weatherData?.city.name }}</p>
     <p>°C</p>
   </div>
   <div>
     <div>
-      <p>{{ weatherData?.main.temp }}</p>
+      <p>{{ weatherData?.list[0].main.temp }}</p>
       <!-- formattare la data -->
-      <p>{{ weatherData?.dt }}</p>
+      <p>{{ weatherData?.list[0].dt }}</p>
     </div>
     <div>
       <div>
-        <p>{{ weatherData?.weather[0].icon }}</p>
+        <p>{{ weatherData?.list[0].weather[0].icon }}</p>
       </div>
       <div>
         <div>
-          <p>{{ weatherData?.main.temp_max }}</p>
-          <p>{{ weatherData?.main.temp_min }}</p>
+          <p>{{ weatherData?.list[0].main.temp_max }}</p>
+          <p>{{ weatherData?.list[0].main.temp_min }}</p>
         </div>
         <div>
-          <p>{{ weatherData?.weather[0].description }}</p>
-          <p>{{ weatherData?.main.feels_like }}</p>
+          <p>{{ weatherData?.list[0].weather[0].description }}</p>
+          <p>{{ weatherData?.list[0].main.feels_like }}</p>
         </div>
       </div>
     </div>

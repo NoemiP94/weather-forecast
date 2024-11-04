@@ -5,15 +5,15 @@
       <h6>icona - wind status</h6>
       <div>
         <!-- da formattare in km/h -->
-        <p>{{ datas?.wind.speed }}</p>
+        <p>{{ weatherData?.list[0].wind.speed }}</p>
         <!-- da formattare in orario -->
-        <p>{{ datas?.dt }}</p>
+        <p>{{ weatherData?.list[0].dt }}</p>
       </div>
     </div>
     <div>
       <h6>icon - Humidity</h6>
       <div>
-        <p>{{ datas?.main.humidity }} %</p>
+        <p>{{ weatherData?.list[0].main.humidity }} %</p>
       </div>
     </div>
     <div>
@@ -21,28 +21,28 @@
       <div>
         <h6>Sunrise</h6>
         <!-- orario da formattare -->
-        <p>{{ datas?.sys.sunrise }}</p>
+        <p>{{ weatherData?.city.sunrise }}</p>
       </div>
     </div>
     <div>
-      <h6>icon - pression</h6>
+      <h6>icon - pressure</h6>
       <div>
-        <p>{{ datas?.main.pressure }}</p>
+        <p>{{ weatherData?.list[0].main.pressure }}</p>
         <!-- orario da formattare -->
-        <p>{{ datas?.dt }}</p>
+        <p>{{ weatherData?.list[0].dt }}</p>
       </div>
     </div>
     <div>
       <h6>icon -Visibility</h6>
       <!-- formattare in kms -->
-      <div>{{ datas?.visibility }}</div>
+      <div>{{ weatherData?.list[0].visibility }}</div>
     </div>
     <div>
       <div>icona</div>
       <div>
         <h6>Sunset</h6>
         <!-- orario da formattare -->
-        <p>{{ datas?.sys.sunset }}</p>
+        <p>{{ weatherData?.city.sunset }}</p>
       </div>
     </div>
   </div>

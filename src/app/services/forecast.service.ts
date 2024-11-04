@@ -10,10 +10,8 @@ export class ForecastService {
   currentInputValue = this.inputValueSource.asObservable();
 
   APIKey = 'b4ec94624363dba072a0ec4073e9b6d4';
-  //cityName = 'Milan';
   lang = 'it';
-  //baseURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${this.APIKey}&units=metric&lang=${this.lang}`;
-  //nextForecast = `https://api.openweathermap.org/data/2.5/forecast/daily?q=${this.cityName}&cnt=10&appid=${this.APIKey}&units=metric&lang=${this.lang}`;
+
   constructor(private http: HttpClient) {}
 
   //prende valore input
@@ -22,12 +20,7 @@ export class ForecastService {
   }
 
   getForecast(cityName: string): Observable<any> {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${this.APIKey}&units=metric&lang=${this.lang}`;
-
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${this.APIKey}&units=metric&lang=${this.lang}`;
     return this.http.get<any>(url);
   }
-
-  // getNextForecast() {
-  //   return this.http.get(this.nextForecast);
-  // }
 }
