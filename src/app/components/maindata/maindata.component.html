@@ -1,26 +1,31 @@
 <div style="background-color: #272727">
   <div>
     <p>{{ weatherData?.city.name }}</p>
-    <p>°C</p>
   </div>
   <div>
     <div>
-      <p>{{ weatherData?.list[0].main.temp }}</p>
+      <p>{{ weatherData?.list[0].main.temp }} °C</p>
+      <p>{{ getDayOfWeek(weatherData?.list[0].dt_txt) }}</p>
       <!-- formattare la data -->
-      <p>{{ weatherData?.list[0].dt }}</p>
+      <p>{{ weatherData?.list[0].dt_txt }}</p>
     </div>
     <div>
       <div>
-        <p>{{ weatherData?.list[0].weather[0].icon }}</p>
+        <img
+          src="https://openweathermap.org/img/wn/{{
+            weatherData?.list[0].weather[0].icon
+          }}@2x.png"
+          alt="{{ weatherData?.list[0].weather[0].main }}"
+        />
       </div>
       <div>
         <div>
-          <p>{{ weatherData?.list[0].main.temp_max }}</p>
-          <p>{{ weatherData?.list[0].main.temp_min }}</p>
+          <p>{{ weatherData?.list[0].main.temp_max }} °C</p>
+          <p>/{{ weatherData?.list[0].main.temp_min }} °C</p>
         </div>
         <div>
           <p>{{ weatherData?.list[0].weather[0].description }}</p>
-          <p>{{ weatherData?.list[0].main.feels_like }}</p>
+          <p>Percepiti: {{ weatherData?.list[0].main.feels_like }} °C</p>
         </div>
       </div>
     </div>

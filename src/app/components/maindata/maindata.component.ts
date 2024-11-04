@@ -29,4 +29,18 @@ export class MaindataComponent implements OnInit {
       console.log(this.weatherData);
     });
   }
+
+  getDayOfWeek(dateString: string): string {
+    const daysOfWeek = [
+      'Domenica',
+      'Lunedì',
+      'Martedì',
+      'Mercoledì',
+      'Giovedì',
+      'Venerdì',
+      'Sabato',
+    ];
+    const date = new Date(dateString);
+    return daysOfWeek[date.getDay()];
+  }
 }
