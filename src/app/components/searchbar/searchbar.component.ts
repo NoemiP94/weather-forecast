@@ -18,12 +18,4 @@ export class SearchbarComponent implements OnInit {
     const cityName = this.cityInput.nativeElement.value;
     this.dataService.changeCityName(cityName);
   }
-
-  // getInputValue(event: Event) {
-  //   event.preventDefault();
-  //   //console.log(this.cityInput);
-  //   const value = this.cityInput.nativeElement.value;
-  //   this.forecast.getSearchValue(value);
-  //   console.log(value);
-  // }
 }

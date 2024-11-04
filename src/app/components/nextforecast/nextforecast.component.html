@@ -1,1 +1,14 @@
-<p>nextforecast works!</p>
+<div>
+  <h4>Next Forecast</h4>
+  <div
+    style="border: 1px solid white"
+    *ngFor="let weather of weatherData; index as i; trackBy: trackByIndex"
+  >
+    <div>
+      <p>{{ getDayOfWeek(weather.dt_txt) }}</p>
+      <p>{{ getTime(weather.dt_txt) }}</p>
+      <p>icona: {{ weather.weather[0].icon }}</p>
+      <p>{{ weather.main.temp }} °C</p>
+    </div>
+  </div>
+</div>
