@@ -7,7 +7,13 @@
     <div>
       <p>{{ getDayOfWeek(weather.dt_txt) }}</p>
       <p>{{ getTime(weather.dt_txt) }}</p>
-      <p>icona: {{ weather.weather[0].icon }}</p>
+      <img
+        src="https://openweathermap.org/img/wn/{{
+          weather.weather[0].icon
+        }}@2x.png"
+        alt="icon"
+      />
+
       <p>{{ weather.main.temp }} °C</p>
     </div>
   </div>
