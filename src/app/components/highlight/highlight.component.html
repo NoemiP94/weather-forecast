@@ -2,47 +2,84 @@
   <h4>Today's Highlight</h4>
   <div>
     <div>
-      <h6>icona - wind status</h6>
+      <div>
+        <img
+          src="https://img.icons8.com/?size=100&id=RtDA8YDN9Mi9&format=png&color=000000"
+          alt="wind"
+        />
+      </div>
+      <p>- Vento</p>
       <div>
         <!-- da formattare in km/h -->
-        <p>{{ weatherData?.list[0].wind.speed }}</p>
+        <p>{{ weatherData?.list[0].wind.speed * 3.6 }} km/h</p>
         <!-- da formattare in orario -->
-        <p>{{ weatherData?.list[0].dt }}</p>
+        <p>{{ weatherData?.list[0].dt | date : "shortTime" }}</p>
       </div>
     </div>
     <div>
-      <h6>icon - Humidity</h6>
+      <div>
+        <img
+          src="https://img.icons8.com/?size=100&id=hpwbr3sG19tQ&format=png&color=000000"
+          alt="humidity"
+        />
+        <p>- Umidità</p>
+      </div>
+
       <div>
         <p>{{ weatherData?.list[0].main.humidity }} %</p>
       </div>
     </div>
     <div>
-      <div>icona</div>
       <div>
-        <h6>Sunrise</h6>
+        <img
+          src="https://img.icons8.com/?size=100&id=eB996llrCC83&format=png&color=000000"
+          alt="sunrise"
+        />
+      </div>
+      <div>
+        <h6>Alba</h6>
         <!-- orario da formattare -->
-        <p>{{ weatherData?.city.sunrise }}</p>
+        <p>{{ weatherData?.city.sunrise | date : "shortTime" }}</p>
       </div>
     </div>
     <div>
-      <h6>icon - pressure</h6>
       <div>
-        <p>{{ weatherData?.list[0].main.pressure }}</p>
+        <img
+          src="https://img.icons8.com/?size=100&id=w04ro2PlMDyA&format=png&color=000000"
+          alt="pressure"
+        />
+        <p>- Pressione</p>
+      </div>
+
+      <div>
+        <p>{{ weatherData?.list[0].main.pressure }} mbar</p>
         <!-- orario da formattare -->
-        <p>{{ weatherData?.list[0].dt }}</p>
+        <p>{{ weatherData?.list[0].dt | date : "shortTime" }}</p>
       </div>
     </div>
     <div>
-      <h6>icon -Visibility</h6>
+      <div>
+        <img
+          src="https://img.icons8.com/?size=100&id=CWkCzh9aKpqb&format=png&color=000000"
+          alt="visibility"
+        />
+        <p>- Visibilità</p>
+      </div>
       <!-- formattare in kms -->
-      <div>{{ weatherData?.list[0].visibility }}</div>
+      <p>{{ weatherData?.list[0].visibility | metersToKilometers }}</p>
+      <p>{{ weatherData?.list[0].dt | date : "shortTime" }}</p>
     </div>
     <div>
-      <div>icona</div>
       <div>
-        <h6>Sunset</h6>
+        <img
+          src="https://img.icons8.com/?size=100&id=9XlIvJuZ1DEv&format=png&color=000000"
+          alt="sunset"
+        />
+      </div>
+      <div>
+        <h6>Tramonto</h6>
         <!-- orario da formattare -->
-        <p>{{ weatherData?.city.sunset }}</p>
+        <p>{{ weatherData?.city.sunset | date : "shortTime" }}</p>
       </div>
     </div>
   </div>

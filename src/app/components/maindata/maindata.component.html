@@ -7,7 +7,7 @@
       <p>{{ weatherData?.list[0].main.temp }} °C</p>
       <p>{{ getDayOfWeek(weatherData?.list[0].dt_txt) }}</p>
       <!-- formattare la data -->
-      <p>{{ weatherData?.list[0].dt_txt }}</p>
+      <p>{{ weatherData?.list[0].dt_txt | date : "mediumDate" }}</p>
     </div>
     <div>
       <div>
@@ -24,7 +24,9 @@
           <p>/{{ weatherData?.list[0].main.temp_min }} °C</p>
         </div>
         <div>
-          <p>{{ weatherData?.list[0].weather[0].description }}</p>
+          <p>
+            {{ weatherData?.list[0].weather[0].description | capitalizeFirst }}
+          </p>
           <p>Percepiti: {{ weatherData?.list[0].main.feels_like }} °C</p>
         </div>
       </div>
