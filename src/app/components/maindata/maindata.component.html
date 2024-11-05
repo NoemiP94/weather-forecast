@@ -1,34 +1,32 @@
-<div style="background-color: #272727">
-  <div>
-    <p>{{ weatherData?.city.name }}</p>
+<div class="bg-zinc-800 rounded-lg m-3">
+  <div class="p-2">
+    <h3 class="text-center">{{ weatherData?.city.name }}</h3>
   </div>
-  <div>
+  <div class="flex mx-2 justify-between">
     <div>
-      <p>{{ weatherData?.list[0].main.temp }} °C</p>
-      <p>{{ getDayOfWeek(weatherData?.list[0].dt_txt) }}</p>
-      <!-- formattare la data -->
+      <h4 style="margin: 0">{{ getDayOfWeek(weatherData?.list[0].dt_txt) }}</h4>
+
       <p>{{ weatherData?.list[0].dt_txt | date : "mediumDate" }}</p>
     </div>
     <div>
+      <img
+        src="https://openweathermap.org/img/wn/{{
+          weatherData?.list[0].weather[0].icon
+        }}@2x.png"
+        alt="{{ weatherData?.list[0].weather[0].main }}"
+      />
+    </div>
+    <div class="text-end">
       <div>
-        <img
-          src="https://openweathermap.org/img/wn/{{
-            weatherData?.list[0].weather[0].icon
-          }}@2x.png"
-          alt="{{ weatherData?.list[0].weather[0].main }}"
-        />
+        <p style="margin: 0">{{ weatherData?.list[0].main.temp_max }} °C</p>
+        <p>/{{ weatherData?.list[0].main.temp_min }} °C</p>
       </div>
       <div>
-        <div>
-          <p>{{ weatherData?.list[0].main.temp_max }} °C</p>
-          <p>/{{ weatherData?.list[0].main.temp_min }} °C</p>
-        </div>
-        <div>
-          <p>
-            {{ weatherData?.list[0].weather[0].description | capitalizeFirst }}
-          </p>
-          <p>Percepiti: {{ weatherData?.list[0].main.feels_like }} °C</p>
-        </div>
+        <p>
+          {{ weatherData?.list[0].weather[0].description | capitalizeFirst }}
+        </p>
+        <p style="margin: 0">Percepiti:</p>
+        <p>{{ weatherData?.list[0].main.feels_like }} °C</p>
       </div>
     </div>
   </div>
