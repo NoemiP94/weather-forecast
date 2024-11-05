@@ -1,85 +1,118 @@
-<div class="bg-zinc-800">
-  <h4>Today's Highlight</h4>
+<div class="bg-neutral-800 rounded-lg m-3">
+  <h4 class="p-2">Oggi</h4>
   <div>
-    <div>
-      <div>
-        <img
-          src="https://img.icons8.com/?size=100&id=RtDA8YDN9Mi9&format=png&color=000000"
-          alt="wind"
-        />
+    <div class="flex flex-wrap justify-around">
+      <div class="bg-neutral-700 rounded-lg m-2 p-2" style="width: 9rem">
+        <div class="flex justify-center">
+          <img
+            src="https://img.icons8.com/?size=100&id=RtDA8YDN9Mi9&format=png&color=000000"
+            alt="wind"
+            style="width: 1.5rem; height: 1.5rem; margin-right: 10px"
+          />
+          <p>Vento</p>
+        </div>
+        <div>
+          <p class="text-end">
+            <span class="text-2xl"
+              >{{ weatherData?.list[0].wind.speed * 3.6 }} </span
+            >km/h
+          </p>
+          <p class="text-xs text-end">
+            {{ weatherData?.list[0].dt | date : "shortTime" }}
+          </p>
+        </div>
       </div>
-      <p>- Vento</p>
-      <div>
-        <!-- da formattare in km/h -->
-        <p>{{ weatherData?.list[0].wind.speed * 3.6 }} km/h</p>
-        <!-- da formattare in orario -->
-        <p>{{ weatherData?.list[0].dt | date : "shortTime" }}</p>
+      <div class="bg-neutral-700 rounded-lg m-2 p-2" style="width: 9rem">
+        <div class="flex justify-center">
+          <img
+            src="https://img.icons8.com/?size=100&id=hpwbr3sG19tQ&format=png&color=000000"
+            alt="humidity"
+            style="width: 1.5rem; height: 1.5rem; margin-right: 10px"
+          />
+          <p>Umidità</p>
+        </div>
+        <div class="text-end">
+          <p>
+            <span class="text-2xl">{{
+              weatherData?.list[0].main.humidity
+            }}</span>
+            %
+          </p>
+        </div>
+      </div>
+      <div class="bg-neutral-700 rounded-lg m-2 p-2" style="width: 9rem">
+        <div class="flex justify-content">
+          <img
+            src="https://img.icons8.com/?size=100&id=w04ro2PlMDyA&format=png&color=000000"
+            alt="pressure"
+            style="width: 1.5rem; height: 1.5rem; margin-right: 10px"
+          />
+          <p>Pressione</p>
+        </div>
+        <div>
+          <p class="text-end">
+            <span class="text-2xl">{{
+              weatherData?.list[0].main.pressure
+            }}</span>
+            mbar
+          </p>
+          <p class="text-xs text-end">
+            {{ weatherData?.list[0].dt | date : "shortTime" }}
+          </p>
+        </div>
+      </div>
+      <div class="bg-neutral-700 rounded-lg m-2 p-2" style="width: 9rem">
+        <div class="flex justify-center">
+          <img
+            src="https://img.icons8.com/?size=100&id=CWkCzh9aKpqb&format=png&color=000000"
+            alt="visibility"
+            style="width: 1.5rem; height: 1.5rem; margin-right: 10px"
+          />
+          <p>Visibilità</p>
+        </div>
+        <p class="text-2xl text-end">
+          {{ weatherData?.list[0].visibility | metersToKilometers }}
+        </p>
+        <p class="text-end text-xs">
+          {{ weatherData?.list[0].dt | date : "shortTime" }}
+        </p>
       </div>
     </div>
-    <div>
-      <div>
-        <img
-          src="https://img.icons8.com/?size=100&id=hpwbr3sG19tQ&format=png&color=000000"
-          alt="humidity"
-        />
-        <p>- Umidità</p>
-      </div>
 
-      <div>
-        <p>{{ weatherData?.list[0].main.humidity }} %</p>
-      </div>
-    </div>
     <div>
-      <div>
-        <img
-          src="https://img.icons8.com/?size=100&id=eB996llrCC83&format=png&color=000000"
-          alt="sunrise"
-        />
-      </div>
-      <div>
-        <h6>Alba</h6>
-        <!-- orario da formattare -->
-        <p>{{ weatherData?.city.sunrise | date : "shortTime" }}</p>
-      </div>
-    </div>
-    <div>
-      <div>
-        <img
-          src="https://img.icons8.com/?size=100&id=w04ro2PlMDyA&format=png&color=000000"
-          alt="pressure"
-        />
-        <p>- Pressione</p>
-      </div>
+      <div
+        class="bg-neutral-700 rounded-lg m-2 p-2 flex justify-around items-center"
+      >
+        <div>
+          <img
+            src="https://img.icons8.com/?size=100&id=eB996llrCC83&format=png&color=000000"
+            alt="sunrise"
+          />
+        </div>
+        <div>
+          <p class="text-base">Alba</p>
 
-      <div>
-        <p>{{ weatherData?.list[0].main.pressure }} mbar</p>
-        <!-- orario da formattare -->
-        <p>{{ weatherData?.list[0].dt | date : "shortTime" }}</p>
+          <p class="text-xl">
+            {{ weatherData?.city.sunrise | date : "shortTime" }}
+          </p>
+        </div>
       </div>
-    </div>
-    <div>
-      <div>
-        <img
-          src="https://img.icons8.com/?size=100&id=CWkCzh9aKpqb&format=png&color=000000"
-          alt="visibility"
-        />
-        <p>- Visibilità</p>
-      </div>
-      <!-- formattare in kms -->
-      <p>{{ weatherData?.list[0].visibility | metersToKilometers }}</p>
-      <p>{{ weatherData?.list[0].dt | date : "shortTime" }}</p>
-    </div>
-    <div>
-      <div>
-        <img
-          src="https://img.icons8.com/?size=100&id=9XlIvJuZ1DEv&format=png&color=000000"
-          alt="sunset"
-        />
-      </div>
-      <div>
-        <h6>Tramonto</h6>
-        <!-- orario da formattare -->
-        <p>{{ weatherData?.city.sunset | date : "shortTime" }}</p>
+      <div
+        class="bg-neutral-700 rounded-lg m-2 p-2 flex justify-around items-center"
+      >
+        <div>
+          <img
+            src="https://img.icons8.com/?size=100&id=9XlIvJuZ1DEv&format=png&color=000000"
+            alt="sunset"
+          />
+        </div>
+        <div>
+          <p class="text-base">Tramonto</p>
+
+          <p class="text-xl">
+            {{ weatherData?.city.sunset | date : "shortTime" }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
