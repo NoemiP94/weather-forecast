@@ -1,20 +1,22 @@
-<div class="bg-zinc-800">
-  <h4>Next Forecast</h4>
-  <div
-    style="border: 1px solid white"
-    *ngFor="let weather of weatherData; index as i; trackBy: trackByIndex"
-  >
-    <div>
-      <p>{{ getDayOfWeek(weather.dt_txt) }}</p>
-      <p>{{ getTime(weather.dt_txt) }}</p>
-      <img
-        src="https://openweathermap.org/img/wn/{{
-          weather.weather[0].icon
-        }}@2x.png"
-        alt="icon"
-      />
+<div class="bg-neutral-800 rounded-lg m-3">
+  <h4 class="p-2">Prossime previsioni</h4>
+  <div class="flex flex-wrap justify-around">
+    <div
+      class="bg-neutral-700 rounded-lg m-2 p-2"
+      *ngFor="let weather of weatherData; index as i; trackBy: trackByIndex"
+    >
+      <div>
+        <p>{{ getDayOfWeek(weather.dt_txt) }}</p>
+        <p>{{ getTime(weather.dt_txt) }}</p>
+        <img
+          src="https://openweathermap.org/img/wn/{{
+            weather.weather[0].icon
+          }}@2x.png"
+          alt="icon"
+        />
 
-      <p>{{ weather.main.temp }} °C</p>
+        <p>{{ weather.main.temp }} °C</p>
+      </div>
     </div>
   </div>
 </div>

@@ -11,7 +11,6 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { MaindataComponent } from './components/maindata/maindata.component';
 import { HighlightComponent } from './components/highlight/highlight.component';
 import { NextforecastComponent } from './components/nextforecast/nextforecast.component';
-import { OtherComponent } from './components/other/other.component';
 import { provideHttpClient } from '@angular/common/http';
 
 import { MatInputModule } from '@angular/material/input';
@@ -28,7 +27,6 @@ import { MetersToKilometersPipe } from './pipes/meters-to-kilometers.pipe';
     MaindataComponent,
     HighlightComponent,
     NextforecastComponent,
-    OtherComponent,
     CapitalizeFirstPipe,
     MetersToKilometersPipe,
   ],
