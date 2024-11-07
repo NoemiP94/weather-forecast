@@ -1,5 +1,5 @@
 # Weather Forecast 🌞
-This project was developed using Angular
+This project was developed using Angular. 
 In this application it's possible to view the main meteorological conditions. 🌤️
 You can choose a city from from searchbar.  📝
 
