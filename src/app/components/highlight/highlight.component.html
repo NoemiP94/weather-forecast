@@ -18,7 +18,7 @@
             >km/h
           </p>
           <p class="text-xs text-end">
-            {{ weatherData?.list[0].dt | date : "shortTime" }}
+            {{ weatherData?.list[0].dt_txt | date : "shortTime" }}
           </p>
         </div>
       </div>
@@ -57,7 +57,7 @@
             mbar
           </p>
           <p class="text-xs text-end">
-            {{ weatherData?.list[0].dt | date : "shortTime" }}
+            {{ weatherData?.list[0].dt_txt | date : "shortTime" }}
           </p>
         </div>
       </div>
@@ -74,7 +74,7 @@
           {{ weatherData?.list[0].visibility | metersToKilometers }}
         </p>
         <p class="text-end text-xs">
-          {{ weatherData?.list[0].dt | date : "shortTime" }}
+          {{ weatherData?.list[0].dt_txt | date : "shortTime" }}
         </p>
       </div>
     </div>
@@ -93,7 +93,7 @@
           <p class="text-base">Alba</p>
 
           <p class="text-xl">
-            {{ weatherData?.city.sunrise | date : "shortTime" }}
+            {{ weatherData?.city.sunrise | unixTimestampAmPm }}
           </p>
         </div>
       </div>
@@ -110,7 +110,7 @@
           <p class="text-base">Tramonto</p>
 
           <p class="text-xl">
-            {{ weatherData?.city.sunset | date : "shortTime" }}
+            {{ weatherData?.city.sunset | unixTimestampAmPm }}
           </p>
         </div>
       </div>

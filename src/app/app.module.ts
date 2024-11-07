@@ -20,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CapitalizeFirstPipe } from './pipes/capitalize-first.pipe';
 import { MetersToKilometersPipe } from './pipes/meters-to-kilometers.pipe';
 import { RoundPipe } from './pipes/round.pipe';
+import { UnixTimestampAmPmPipe } from './pipes/unix-timestamp-am-pm.pipe';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { RoundPipe } from './pipes/round.pipe';
     CapitalizeFirstPipe,
     MetersToKilometersPipe,
     RoundPipe,
+    UnixTimestampAmPmPipe,
   ],
   imports: [
     BrowserModule,

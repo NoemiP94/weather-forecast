@@ -1,11 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 section{
     background-color: #1E1E1E;
     color: white;
+    padding-bottom: 1rem;
  
 }
 
-/* .card{
-    background-color: #272727;
-} */

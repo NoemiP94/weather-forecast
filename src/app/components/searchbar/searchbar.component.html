@@ -1,11 +1,15 @@
 <div class="flex flex-col items-center p-4">
   <div><h4>Buongiorno</h4></div>
   <div>
-    <form (submit)="sendCityName($event)">
-      <mat-form-field class="example-full-width">
-        <input #cityInput placeholder="Inserisci una città" matInput />
-      </mat-form-field>
-      <button type="submit">
+    <form (submit)="sendCityName($event)" class="flex items-center">
+      <input
+        #cityInput
+        placeholder="Inserisci una città"
+        matInput
+        class="custom-input p-2 rounded"
+      />
+
+      <button type="submit" class="ms-3 p-2">
         <mat-icon>search</mat-icon>
       </button>
     </form>

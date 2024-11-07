@@ -5,9 +5,9 @@
       class="bg-neutral-700 rounded-lg m-2 p-2"
       *ngFor="let weather of weatherData; index as i; trackBy: trackByIndex"
     >
-      <div>
-        <p>{{ getDayOfWeek(weather.dt_txt) }}</p>
-        <p>{{ getTime(weather.dt_txt) }}</p>
+      <div class="text-center">
+        <p class="pt-2 text-sm">{{ getDayOfWeek(weather.dt_txt) }}</p>
+        <p class="text-xs">{{ getTime(weather.dt_txt) }}</p>
         <img
           src="https://openweathermap.org/img/wn/{{
             weather.weather[0].icon
