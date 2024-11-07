@@ -21,3 +21,6 @@ npm install
 ```bash
 ng serve
 ```
+
+## Author
+Noemi Pusceddu
