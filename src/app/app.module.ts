@@ -19,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CapitalizeFirstPipe } from './pipes/capitalize-first.pipe';
 import { MetersToKilometersPipe } from './pipes/meters-to-kilometers.pipe';
+import { RoundPipe } from './pipes/round.pipe';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MetersToKilometersPipe } from './pipes/meters-to-kilometers.pipe';
     NextforecastComponent,
     CapitalizeFirstPipe,
     MetersToKilometersPipe,
+    RoundPipe,
   ],
   imports: [
     BrowserModule,

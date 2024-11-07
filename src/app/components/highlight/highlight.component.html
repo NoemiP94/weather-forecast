@@ -1,4 +1,4 @@
-<div class="bg-neutral-800 rounded-lg m-3">
+<div class="card rounded-lg m-3 pb-1">
   <h4 class="p-2">Oggi</h4>
   <div>
     <div class="flex flex-wrap justify-around">
@@ -14,7 +14,7 @@
         <div>
           <p class="text-end">
             <span class="text-2xl"
-              >{{ weatherData?.list[0].wind.speed * 3.6 }} </span
+              >{{ weatherData?.list[0].wind.speed * 3.6 | round }} </span
             >km/h
           </p>
           <p class="text-xs text-end">
