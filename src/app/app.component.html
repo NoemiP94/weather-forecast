@@ -1,6 +1,12 @@
 <section>
   <app-searchbar></app-searchbar>
-  <app-maindata></app-maindata>
-  <app-highlight></app-highlight>
-  <app-nextforecast></app-nextforecast>
+  <div class="lg:flex lg:flex-col">
+    <div class="lg:flex lg:items-center">
+      <app-maindata class="lg:w-1/2"></app-maindata>
+      <app-highlight class="lg:w-1/2"></app-highlight>
+    </div>
+    <div>
+      <app-nextforecast></app-nextforecast>
+    </div>
+  </div>
 </section>

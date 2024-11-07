@@ -1,8 +1,8 @@
-<div class="card rounded-lg m-3">
+<div class="card rounded-lg m-3 md:mx-16 lg:py-28">
   <div class="p-2">
     <h3 class="text-center">{{ weatherData?.city.name }}</h3>
   </div>
-  <div class="flex mx-2 justify-between">
+  <div class="flex mx-2 justify-between md:justify-evenly">
     <div>
       <p style="margin: 0" class="text-2xl font-medium">
         {{ getDayOfWeek(weatherData?.list[0].dt_txt) }}
